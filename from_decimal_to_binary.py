@@ -51,4 +51,4 @@ elif type == "hexadecimal":
             break
         result.pop(i)
 result = [str(num) for num in result]
-print(f'Binary: {"".join(result)}')
+print(f'{type}: {"".join(result)}')
