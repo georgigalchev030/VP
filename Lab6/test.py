@@ -1,9 +1,22 @@
-class Student():
-    def __init__(self, name, fac_num, svg_grade):
+class Processor:
+    def __init__(self, name, price, age):
         self.name = name
-        self.fac_num = fac_num
-        self.svg_grade = svg_grade
+        self.price = price
+        self.age = age
+
+    def print(self):
+        print(self.name, self.price, self.age)
 
 
-ge6 = Student("Gosho", "121222030",5.5)
-print(ge6.fac_num)
+class VideoCard(Processor):
+    def __init__(self, name, price, age,  vram):
+        super().__init__(name, price, age)
+        self.vram = vram
+
+
+cpu = Processor("intel", 457.0, 4)
+vcc = VideoCard("nvidia", 560.0, 5, 1232)
+cpu.print()
+vcc.print()
+
+
